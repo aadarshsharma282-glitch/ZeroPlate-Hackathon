@@ -5,22 +5,6 @@ import path from 'path';
 const dir = process.cwd();
 
 async function initAndCommit() {
-  console.log('Initializing Git repository at:', dir);
-  await git.init({ fs, dir, defaultBranch: 'main' });
-
-  console.log('Adding remote origin...');
-  try {
-    await git.addRemote({
-      fs,
-      dir,
-      remote: 'origin',
-      url: 'https://github.com/Prashant-Singh-Rawat/ZeroPlate-Hackathon.git',
-      force: true,
-    });
-  } catch (e) {
-    console.log('Remote note:', e.message);
-  }
-
   console.log('Staging all files in repository...');
   const files = [];
 
@@ -48,9 +32,6 @@ async function initAndCommit() {
     await git.add({ fs, dir, filepath: file });
   }
 
-  console.log(`Staged ${files.length} files.`);
-
-  console.log('Creating commit on main...');
   const sha = await git.commit({
     fs,
     dir,
@@ -58,17 +39,12 @@ async function initAndCommit() {
       name: 'ZeroPlate Contributor',
       email: 'contributor@zeroplate.org',
     },
-    message: 'feat(settings): redesign settings with Account & Security, General, global dark mode, and multi-language support (English, Hindi, Marathi)',
+    message: 'feat(settings): redesign settings (Account & Security + General) with global dark mode and multilingual support (EN, HI, MR)',
   });
 
-  console.log('Commit SHA:', sha);
-
-  console.log('Creating branch: feature/settings-appearance-language');
-  await git.branch({ fs, dir, ref: 'feature/settings-appearance-language', checkout: true });
-
-  console.log('Git branch created successfully!');
+  console.log('Committed to branch. SHA:', sha);
 }
 
 initAndCommit().catch((err) => {
-  console.error('Error during git init and commit:', err);
+  console.error('Error during commit:', err);
 });
