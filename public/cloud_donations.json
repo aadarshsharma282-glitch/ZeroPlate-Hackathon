@@ -55,33 +55,5 @@
     "status": "AVAILABLE",
     "packagingAvailable": true,
     "createdAt": "2026-08-30T00:30:23.990Z"
-  },
-  {
-    "id": "don_1788049780146_222",
-    "donorId": "aadarshsharma282@gmail.com",
-    "donorName": "Aadarsh Sharma",
-    "donorType": "Restaurant",
-    "foodName": "BIRYANI",
-    "foodCategory": "Main Course",
-    "category": "Main Course",
-    "foodSpecifications": [
-      "Biryani"
-    ],
-    "foodType": "veg",
-    "mealCount": 20,
-    "quantity": "22/4",
-    "description": "Fresh surplus food ready for NGO rescue.",
-    "packagingStatus": "Already packed",
-    "imageUrl": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=800&auto=format&fit=crop&q=80",
-    "latitude": 31.25,
-    "longitude": 75.69999694824219,
-    "pickupLocation": "Phagwara, Punjab, India",
-    "pickupAddress": "Phagwara, Punjab, India",
-    "originAddress": "Phagwara, Punjab, India",
-    "availableFrom": "2026-08-30T00:29:40.146Z",
-    "pickupDeadline": "2026-08-30T04:31:00.000Z",
-    "status": "AVAILABLE",
-    "packagingAvailable": true,
-    "createdAt": "2026-08-30T00:29:40.146Z"
   }
 ]
